@@ -1,1 +1,146 @@
-Hello World!
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>LoRAverse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Social preview (nice link cards) -->
+  <meta property="og:title" content="LoRAverse">
+  <meta property="og:description" content="A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models">
+  <meta property="og:image" content="images/teaser.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="conference-badge">
+      <img src="images/logos/iccv25-logo.png" alt="ICCV 2025" class="conference-logo">
+    </div>
+
+    <div class="title">
+      <h1><strong>LoRAverse</strong>: A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models</h1>
+    </div>
+
+    <div class="authors">
+      <a href="#" target="_blank">Mert Sonmezer</a><sup>1</sup>,
+      <a href="#" target="_blank">Matthew Zheng</a><sup>2</sup>,
+      <a href="#" target="_blank">Pinar Yanardag</a><sup>2</sup>
+    </div>
+
+    <div class="affiliations">
+      <div class="affiliation">
+        <sup>1</sup>
+        <img src="images/logos/metu-logo.png" alt="METU Logo" class="affiliation-logo">
+        Middle East Technical University
+      </div>,
+      <div class="affiliation">
+        <sup>2</sup>
+        <img src="images/logos/vt-logo.png" alt="Virginia Tech Logo" class="affiliation-logo">
+        Virginia Tech
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
+        <i class="fas fa-file-pdf"></i> Paper
+      </a>
+      <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
+        <i class="ai ai-arxiv"></i> arXiv
+      </a>
+      <a href="https://github.com/mertsonmezer/loraverse" target="_blank">
+        <i class="fab fa-github"></i> Coming soon
+      </a>
+    </div>
+
+    <div class="teaser">
+      <table>
+        <tr>
+          <td>
+            <img src="images/teaser.png" alt="LoRAverse Overview">
+          </td>
+        </tr>
+        <tr>
+          <td class="caption">
+            LoRAverse enhances image diversity by employing a submodular algorithm to select a diverse and representative set of
+            LoRA adapters. This approach begins by clustering the adapters based on their semantic meanings. From these clusters,
+            the algorithm selects models that not only maximize diversity but also maintain strong alignment with the user-provided
+            prompt, ensuring both variety and relevance in the generated images.
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Abstract</h2>
+      <p>
+        Low-rank Adaptation (LoRA) models have revolutionized the personalization of pre-trained diffusion models by enabling
+        fine-tuning through low-rank, factorized weight matrices specifically optimized for attention layers. These models
+        facilitate the generation of highly customized content across a variety of objects, individuals, and artistic styles
+        without the need for extensive retraining. Despite the availability of over 100K LoRA adapters on platforms like
+        Civit.ai, users often face challenges in navigating, selecting, and effectively utilizing the most suitable adapters due
+        to their sheer volume, diversity, and lack of structured organization. This paper addresses the problem of selecting the
+        most relevant and diverse LoRA models from this vast database by framing the task as a combinatorial optimization
+        problem and proposing a novel submodular framework. Our quantitative and qualitative experiments demonstrate that our
+        method generates diverse outputs across a wide range of domains.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Architecture</h2>
+      <div class="figure method-figure">
+        <img src="images/architecture.jpg" alt="Architecture of LoRAverse">
+        <p class="caption">
+          <strong>Architecture of LoRAverse.</strong> LoRAverse composed of two main modules: concept extractor and submodular retriever. The
+          concept extractor processes the user prompt to identify concepts (keywords). These concepts guide to the
+          submodular retriever, which selects a diverse and relevant subset of LoRA adapters by clustering similar
+          adapters per concept and applying submodular optimization. Additionally, a safety-checking mechanism is integrated to
+          filter out adapters containing offensive or inappropriate content.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Quantitative Results</h2>
+      <div class="figure">
+        <img src="images/results_quantitative.png" alt="Quantitative results">
+        <p class="caption">
+          Results showing performance improvements across different metrics and datasets.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Visualizations</h2>
+      <div class="figure">
+        <img src="images/results_qualitative.png" alt="Qualitative results">
+        <p class="caption">
+          Diverse outputs generated using our selected LoRA adapters across various domains and styles.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>BibTeX</h2>
+      <div class="bibtex">
+        <pre>@article{sonmezer2025loraverse,
+    title = {LoRAverse: A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models},
+    author = {Sonmezer, Mert and Zheng, Matthew and Yanardag, Pinar},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    year = {2025}
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote">
+    <p class="template-credit">
+      This webpage template was borrowed from <a href="https://nerfies.github.io/" target="_blank">Nerfies</a>.
+    </p>
+  </div>
+</body>
+
+</html>

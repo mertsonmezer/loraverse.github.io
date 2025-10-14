@@ -1,0 +1,325 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Conference Badge */
+.conference-badge {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.conference-logo {
+  height: 75px;
+  width: auto;
+}
+
+.conference-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  color: #2c3e50;
+}
+
+/* Authors */
+.authors {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.authors a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.authors a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.authors sup {
+  font-size: 0.8rem;
+  margin-left: 2px;
+}
+
+/* Affiliations */
+.affiliations {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.affiliation {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.affiliation-logo {
+  height: 35px;
+  width: auto;
+  vertical-align: middle;
+  background-color: white;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+/* Links */
+.links {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0 8px;
+  padding: 6px 12px;
+  background-color: #24292e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  vertical-align: middle;
+  border: 1px solid #1b1f23;
+}
+
+.links a:hover {
+  background-color: #1b1f23;
+}
+
+.links a i {
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+
+.venue-logo {
+  height: 16px;
+  width: auto;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* Teaser */
+.teaser {
+  margin-bottom: 50px;
+  background-color: #f8f9fa;
+  padding: 30px 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.teaser table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.teaser img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  max-width: 1000px;
+}
+
+.teaser .caption {
+  text-align: justify;
+  font-style: italic;
+  color: #666;
+  padding: 15px 20px 0;
+  font-size: 0.95rem;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 50px;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+}
+
+.section p {
+  text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Figures */
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.figure .caption {
+  margin-top: 15px;
+  font-style: italic;
+  color: #666;
+  font-size: 0.95rem;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+/* Remove highlighting from method figure */
+.method-figure img {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Footnote */
+.footnote {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footnote .template-credit {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* BibTeX */
+.bibtex {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.bibtex pre {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.template-credit {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.template-credit a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.template-credit a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+  }
+
+  .authors {
+    font-size: 1rem;
+  }
+
+  .links a {
+    margin: 5px 8px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .teaser .caption,
+  .figure .caption {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .teaser {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 1.7rem;
+  }
+
+  .links a {
+    display: block;
+    margin: 5px auto;
+    width: 150px;
+    text-align: center;
+  }
+}
