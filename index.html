@@ -3,34 +3,44 @@
 
 <head>
   <meta charset="utf-8">
-  <title>LoRAverse</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Social preview (nice link cards) -->
+  <title>LoRAverse</title>
+
+  <!-- Meta Tags for SEO and Social Sharing -->
+  <meta name="description" content="LoRAverse: A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models - ICCV 2025">
   <meta property="og:title" content="LoRAverse">
   <meta property="og:description" content="A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models">
   <meta property="og:image" content="images/teaser.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
   <div class="container">
+    <!-- Conference Badge -->
     <div class="conference-badge">
       <img src="images/logos/iccv25-logo.png" alt="ICCV 2025" class="conference-logo">
     </div>
 
+    <!-- Title -->
     <div class="title">
       <h1><strong>LoRAverse</strong>: A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models</h1>
     </div>
 
+    <!-- Authors -->
     <div class="authors">
       <a href="#" target="_blank">Mert Sonmezer</a><sup>1</sup>,
       <a href="#" target="_blank">Matthew Zheng</a><sup>2</sup>,
       <a href="#" target="_blank">Pinar Yanardag</a><sup>2</sup>
     </div>
 
+    <!-- Affiliations -->
     <div class="affiliations">
       <div class="affiliation">
         <sup>1</sup>
@@ -44,23 +54,25 @@
       </div>
     </div>
 
+    <!-- Navigation Links -->
     <div class="links">
-      <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
+      <a href="#" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-file-pdf"></i> Paper
       </a>
-      <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
+      <a href="#" target="_blank" rel="noopener noreferrer">
         <i class="ai ai-arxiv"></i> arXiv
       </a>
-      <a href="https://github.com/mertsonmezer/loraverse" target="_blank">
+      <a href="#" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-github"></i> Coming soon
       </a>
     </div>
 
+    <!-- Teaser Figure -->
     <div class="teaser">
       <table>
         <tr>
           <td>
-            <img src="images/teaser.png" alt="LoRAverse Overview">
+            <img src="images/teaser.jpg" alt="LoRAverse Overview - Submodular algorithm selecting diverse LoRA adapters">
           </td>
         </tr>
         <tr>
@@ -74,6 +86,7 @@
       </table>
     </div>
 
+    <!-- Abstract Section -->
     <div class="section">
       <h2>Abstract</h2>
       <p>
@@ -89,10 +102,11 @@
       </p>
     </div>
 
+    <!-- Method Section -->
     <div class="section">
-      <h2>Architecture</h2>
+      <h2>Method</h2>
       <div class="figure method-figure">
-        <img src="images/architecture.jpg" alt="Architecture of LoRAverse">
+        <img src="images/architecture.jpg" alt="Architecture of LoRAverse showing concept extractor and submodular retriever">
         <p class="caption">
           <strong>Architecture of LoRAverse.</strong> LoRAverse composed of two main modules: concept extractor and submodular retriever. The
           concept extractor processes the user prompt to identify concepts (keywords). These concepts guide to the
@@ -103,30 +117,36 @@
       </div>
     </div>
 
+    <!-- Quantitative Results Section -->
     <div class="section">
       <h2>Quantitative Results</h2>
-      <div class="figure">
-        <img src="images/results_quantitative.png" alt="Quantitative results">
+      <div class="figure quantitative plain">
+        <img src="images/quantitative_results.jpg" alt="Quantitative comparison showing diversity metrics" class="quantitative-img">
         <p class="caption">
-          Results showing performance improvements across different metrics and datasets.
+          <strong>Quantitative Comparison (CFG=7).</strong> LoRAverse enhances the diversity of image sets across various metrics while maintaining comparable text-image alignment.
+          The user study reports which method produced preferred outputs (US-P) by participants, and average rating of
+          faithfulness (US-F) and diversity (US-D) of outputs on a scale of 1 to 5.
         </p>
       </div>
     </div>
 
+    <!-- Qualitative Results Section -->
     <div class="section">
-      <h2>Visualizations</h2>
-      <div class="figure">
-        <img src="images/results_qualitative.png" alt="Qualitative results">
+      <h2>Qualitative Results</h2>
+      <div class="figure plain">
+        <img src="images/qualitative_results.jpg" alt="Qualitative comparison showing diverse image generation">
         <p class="caption">
-          Diverse outputs generated using our selected LoRA adapters across various domains and styles.
+          <strong>Qualitative Comparison.</strong> LoRAverse demonstrates a higher diversity compared to image sets generated by Stylus and SD
+          v1.5.
         </p>
       </div>
     </div>
 
+    <!-- BibTeX Section -->
     <div class="section">
       <h2>BibTeX</h2>
       <div class="bibtex">
-        <pre>@article{sonmezer2025loraverse,
+        <pre>@article{loraverse2025,
     title = {LoRAverse: A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models},
     author = {Sonmezer, Mert and Zheng, Matthew and Yanardag, Pinar},
     booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
@@ -136,9 +156,10 @@
     </div>
   </div>
 
+  <!-- Footer -->
   <div class="footnote">
     <p class="template-credit">
-      This webpage template was borrowed from <a href="https://nerfies.github.io/" target="_blank">Nerfies</a>.
+      This webpage template was borrowed from <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">Nerfies</a>.
     </p>
   </div>
 </body>
