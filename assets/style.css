@@ -239,12 +239,16 @@ body {
 /* Figure variants */
 .figure.quantitative {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* stack image and caption vertically */
+  align-items: center;     /* center contents horizontally */
 }
 
 .figure.quantitative .quantitative-img {
-  max-width: 400px;
-  width: 100%;
+  display: block;
+  margin: 0 auto;         /* ensure centering in non-flex fallbacks */
+  max-width: 480px;       /* make the image smaller */
+  width: 100%;            /* responsive scaling down on small screens */
+  height: auto;
 }
 
 .figure.plain img,
